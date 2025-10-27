@@ -88,7 +88,7 @@ def get_data():
 @app.route("/delete/<int:user_id>",methods=["DELETE"])
 def remove_data(user_id):
     print(user_id)
-    print("change made to test branch feature")
+    print("change made to test new sencond test branch")
     with open("data.json","r") as f:
         content = json.load(f)
     for i in content:
