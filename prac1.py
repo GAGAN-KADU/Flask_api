@@ -67,10 +67,13 @@ def update_put(user_id):
 
 @app.route("/get",methods = ['GET'])
 def get_data():
-    (user_id) = request.args.get('user_id')
+    try:
+        (user_id) = request.args.get('user_id')
+    except:
+        return "Id not found, Please sign up"
 
     print ((user_id))
-    with open("data.json","r") as f:
+    with open("data.json","r") as f: 
         content = json.load(f)
     print(content)
 
@@ -89,6 +92,7 @@ def get_data():
 def remove_data(user_id):
     print(user_id)
     print("change made to test new sencond test branch")
+    print("chnage for stash")
     with open("data.json","r") as f:
         content = json.load(f)
     for i in content:
