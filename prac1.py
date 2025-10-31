@@ -99,16 +99,17 @@ def remove_data(user_id):
         if user_id == int(i['id']):
             content.remove(i)
             break
-
     try:
         with open ("data.json","w") as f:
             json.dump(content,f)
     except json.JSONDecodeError:
-        return "failed while deleting"
-    
+        return "failed while deleting"    
     return "delete succesfullly"
 
-
+@app.route("/testing_branch",methods=["GET","POST"])
+def test():
+    print ("this is a first branch")
+    return "pass"
 
 
 if __name__ == "__main__":
