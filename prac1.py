@@ -108,15 +108,7 @@ def remove_data(user_id):
     
     return "delete succesfullly"
 
-@app.route("/testing",methods=["GET","POST"])
-def test():
-    return "first test on testing branch"
 
-
-@app.route("/testing_api",methods=['GET','POST'])
-def test():
-    print("first test")
-    return "pass"
 
 
 if __name__ == "__main__":
