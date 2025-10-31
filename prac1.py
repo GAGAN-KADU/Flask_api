@@ -107,7 +107,7 @@ def remove_data(user_id):
 
 @app.route("/testing_api",methods=['GET','POST'])
 def test():
-    print("first test")
+    print("this is a seconf branch")
     return "pass"
 
 
