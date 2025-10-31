@@ -109,6 +109,7 @@ def remove_data(user_id):
 @app.route("/testing_branch",methods=["GET","POST"])
 def test():
     print ("this is a first branch")
+    print("this is a seconf branch")
     return "pass"
 
 
